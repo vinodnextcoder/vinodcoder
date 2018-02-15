@@ -1,0 +1,2 @@
+all:
+	python distance.py
