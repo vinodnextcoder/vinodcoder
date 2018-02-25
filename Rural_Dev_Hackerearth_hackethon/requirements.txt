@@ -1,8 +1,0 @@
-Flask
-Flask-SQLAlchemy
-Jinja2
-SQLAlchemy
-Werkzeug
-wsgiref
-Flask-WTF
-alembic
