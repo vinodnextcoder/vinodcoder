@@ -49,10 +49,9 @@ def home():
 
 @app.route('/info', methods=('GET', 'POST'))
 def info():
-    if session['user_name']:
-	u=email
-        users = User.query.filter_by(email=u).first()
-        return render_template('index.html', users=users)
+    if session['user_email']:
+	username=session['user_email']
+        return 'Logged in as ' + username + '<br>' + "<b><a href = '/logout'>click here to log out</a></b>"
     return redirect(url_for('home'))
 
 
