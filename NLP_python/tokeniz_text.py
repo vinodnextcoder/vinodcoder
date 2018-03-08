@@ -1,6 +1,7 @@
 import os
 import nltk
 from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
 dirs=os.listdir("./input")
 
 for files in dirs:
@@ -8,7 +9,19 @@ for files in dirs:
     f=open("./input/"+files,"r")
     r=f.read()
     f.close()
-    #print r
-    #Tokenizing text is important since text  be processed without tokenization. Tokenization process means splitting bigger parts to small parts.
+    
     sent_tok=sent_tokenize(r)
     print sent_tok
+    
+    print "Tokenize Words"
+    word_tok=word_tokenize(r)
+    print word_tok
+
+    f=open("output_sent.txt","w")
+    f.write(sent_tok)
+    f.close()
+
+    f=open("output_word.txt","w")
+    f.write(word_tok)
+    f.close()
+    
