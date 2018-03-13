@@ -1,27 +1,19 @@
-def rverseArray(arr, start, end):
+def rverseList(List, start, end):
     while (start < end):
-        temp = arr[start]
-        arr[start] = arr[end]
-        arr[end] = temp
+        temp = List[start]
+        List[start] = List[end]
+        List[end] = temp
         start += 1
         end = end-1
  
-# Function to left rotate arr[] of size n by d
-def leftRotate(arr, d):
-    n = len(arr)
-    rverseArray(arr, 0, d-1)
-    rverseArray(arr, d, n-1)
-    rverseArray(arr, 0, n-1)
- 
 
-def printArray(arr):
-    for i in range(0, len(arr)):
-        print arr[i],
- 
+List= [1, 2, 3, 4, 5, 6, 7]
+n = len(List)
+print "List Before Reverse"
+for i in range(0, len(List)):
+        print List[i],
+rverseList(List, 0, n-1)
+print "List After Reverse"
+for i in range(0, len(List)):
+        print List[i],
 
-arr = [1, 2, 3, 4, 5, 6, 7]
-n = len(arr)
-rverseArray(arr, 0, n-1)
-for i in range(0, len(arr)):
-        print arr[i],
-#printArray(arr)
