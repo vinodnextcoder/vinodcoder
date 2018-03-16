@@ -11,18 +11,23 @@ with open('marks_list.csv', 'r') as csvfile:
         dict1[row[0]]=row[1]
 
 
-mark_rank = {}
+result = {}
+c=0
+for key,value in dict1.items():
+    if value in result.values():
+        result[key] = [value]
+    else:
+        result[key].append(value)
 
-for k, v in dict1.items():
-    mark_rank[v] = mark_rank.get(v, [])
-    mark_rank[v].append(k)
-f=open("Rank_output.csv","a")
-f.write("User_id"+","+"Mark"+","+"Rank"+"\n")
-f.close()
-rank_count=0
-for key, value in mark_rank.items():
-    rank_count+=1
-    f=open("Rank_output.csv","a")
-    for x in value:
-        f.write(str(x)+","+str(key)+","+str(rank_count)+"\n")
-    f.close()
+#print result
+# for r in rows:
+
+#     for k, v in dict1.items():
+        
+#         if v==r :
+#             mark_rank[k]= +1
+#         else:
+#             mark_rank[k]=1
+        
+for k, v in result.items():
+     print k,"   " ,v
