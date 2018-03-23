@@ -17,6 +17,11 @@ for i in range(testCases):
             if key==let:
                 cnt+=int(value)
     count1.append(cnt)
+List=[]
+for i in set(count1):
+    List.append(int(i))
+c=0
 
-
-
+max_element= max(count1)
+count= count1.count(max_element)
+print(count)
