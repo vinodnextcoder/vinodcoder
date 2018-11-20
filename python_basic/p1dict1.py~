@@ -1,8 +1,0 @@
-Dict={}
-print "create dict object"
-print  Dict
-#dict added value
-
-Dict = {"NEARLAW" :"Python Developer",1 :["NODE","Python"]}
-print Dict
-
